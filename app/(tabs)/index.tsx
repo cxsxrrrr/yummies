@@ -6,12 +6,12 @@ import { FlatList, Image, Platform, ScrollView, StyleSheet, Text, TextInput, Tou
 const categories = ['Meals', 'Sides', 'Snacks', 'Drinks'];
 
 const allPopularItems = [
-  { id: 1, name: 'Beef Salad', price: '₦1,200', image: require('../../assets/images/beef.jpg'), category: 'Meals' },
-  { id: 2, name: 'Spicy Noodles', price: '₦1,500', image: require('../../assets/images/beef.jpg'), category: 'Meals' },
-  { id: 3, name: 'Vegetable Soup', price: '₦1,000', image: require('../../assets/images/beef.jpg'), category: 'Meals' },
-  { id: 4, name: 'French Fries', price: '₦800', image: require('../../assets/images/beef.jpg'), category: 'Sides' },
-  { id: 5, name: 'Spring Rolls', price: '₦900', image: require('../../assets/images/beef.jpg'), category: 'Snacks' },
-  { id: 6, name: 'Coke', price: '₦500', image: require('../../assets/images/beef.jpg'), category: 'Drinks' },
+  { id: 1, name: 'Patacon', price: '5$', image: { uri: 'https://t3.ftcdn.net/jpg/03/33/54/70/360_F_333547004_FNDwFdz8E6elOaJ4pNllaRcTFLReA5XF.jpg' }, category: 'Meals' },
+  { id: 2, name: 'Spicy Noodles', price: '6.99$', image: { uri: 'https://static.vecteezy.com/system/resources/previews/056/253/370/non_2x/spicy-noodles-in-a-bowl-on-transparent-background-free-png.png' }, category: 'Meals' },
+  { id: 3, name: 'Vegetable Soup', price: '3.99$', image: { uri: 'https://img.freepik.com/free-photo/top-view-delicious-soup-assortment_23-2148634458.jpg?t=st=1751999234~exp=1752002834~hmac=a43bda56dabc70ea4c598f3617258efdadd59c591e1ff2b05e6649310d244cbd&w=1380' }, category: 'Meals' },
+  { id: 4, name: 'French Fries', price: '3.99$', image: { uri: 'https://img.freepik.com/free-photo/crispy-french-fries-with-ketchup-mayonnaise_1150-26588.jpg?t=st=1751999345~exp=1752002945~hmac=77266a2bec5f5a5b66a745f8123b18b027a9ee016b3bebe9b8092b1a19dae973&w=1380' }, category: 'Sides' },
+  { id: 5, name: 'Spring Rolls', price: '3.99$', image: { uri: 'https://img.freepik.com/free-photo/plate-food-with-side-sauce_188544-8402.jpg?t=st=1751999412~exp=1752003012~hmac=5a692e350d513e5318ebadde5ab5dca3149887f4b2d3639cace968908c917fb0&w=1380' }, category: 'Snacks' },
+  { id: 6, name: 'Coke', price: '0.99$', image: { uri: 'https://t4.ftcdn.net/jpg/05/82/97/27/360_F_582972760_T0T4qTwlZDolGql8CJaD1kMIPrG4vIew.jpg' }, category: 'Drinks' },
 ];
 
 export default function HomeScreen() {
@@ -27,13 +27,13 @@ export default function HomeScreen() {
           <Ionicons name="cart" size={28} color="#F97316" />
         </View>
 
-        <Text style={styles.greeting}>Hello Chinwe,</Text>
+        <Text style={styles.greeting}>Hello César,</Text>
         <Text style={styles.question}>What would you like to <Text style={styles.highlight}>eat?</Text></Text>
 
         <View style={styles.searchRow}>
           <View style={styles.searchContainer}>
             <Ionicons name="search" size={20} color="#888" />
-            <TextInput placeholder="Enter a dish name e.g. Egusi soup" style={styles.input} />
+            <TextInput placeholder="Enter a dish name e.g. Soup" style={styles.input} />
           </View>
           <TouchableOpacity style={styles.filterBtn}>
             <Ionicons name="options" size={20} color="#fff" />
@@ -53,10 +53,10 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.offerCard}>
-          <Image source={require('../../assets/images/beef.jpg')} style={styles.offerImage} />
+          <Image source={{ uri: 'https://www.shutterstock.com/image-photo/smash-burger-irresistible-delicacy-600nw-2555291033.jpg' }} style={styles.offerImage} />
           <View style={{ flex: 1, paddingLeft: 10, justifyContent: 'center' }}>
             <Text style={styles.offerTitle}>Yummies Special Burger</Text>
-            <Text style={styles.offerPrice}>Now <Text style={styles.offerPriceValue}>₦1,800</Text> <Text style={styles.discount}>(10% off)</Text></Text>
+            <Text style={styles.offerPrice}>Now <Text style={styles.offerPriceValue}>7$</Text> <Text style={styles.discount}>(10% off)</Text></Text>
             <TouchableOpacity style={styles.addBtn}>
               <Text style={styles.addText}>Add to Cart</Text>
             </TouchableOpacity>
